@@ -14,44 +14,45 @@ body {
 }
 
 .index__header {
+  width: 100%;
+  height: 54px;
   padding: 12px;
 }
 
 .index__main {
   display: flex;
   flex-wrap: wrap;
-  width: 100%;
-  height: 100%;
+  height: 278px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+}
+
+@media screen and (min-width: 1180px) {
+  .index__main {
+    width: 560px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1179px) {
+  .index__main {
+    width: 560px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .index__main {
+    width: 336px;
+  }
 }
 
 .index__work {
   position: relative;
   padding: 12px;
-  cursor: pointer;
-}
-
-@media screen and (min-width: 1180px) {
-  .index__work {
-    width: 20%;
-  }
-}
-
-@media screen and (max-width: 1179px) {
-  .index__work {
-    width: 33.33333333%;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .index__work {
-    width: 100%;
-  }
-}
-
-.index__work::before {
-  content: "";
-  padding-top: 100%;
-  display: block;
+  width: 112px;
+  height: 112px;
 }
 
 .index__link {
@@ -61,6 +62,7 @@ body {
   position: absolute;
   left: 12px;
   top: 12px;
+  cursor: pointer;
 }
 
 .index__filter {
