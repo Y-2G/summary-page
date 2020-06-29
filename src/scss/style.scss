@@ -39,13 +39,28 @@ body {
   &__header {
     width: 100%;
     height: 54px;
-    padding: 12px;
+
+    h1 {
+      padding: 12px;
+      margin: 0 auto;
+      
+      @include mq('pc') {
+        width: 560px;
+      }
+  
+      @include mq('tab') {
+        width: 560px;
+      }
+  
+      @include mq('sp') {
+        width: 336px;
+      }
+    }
   }
   
   &__main {
     display: flex;
     flex-wrap: wrap;
-    height: 278px;
     position: absolute;
     left: 50%;
     top: 50%;
